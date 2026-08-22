@@ -1,0 +1,36 @@
+:root {
+  --color-primario: #4A6B5E;
+  --color-secundario: #A9B4B8;
+  --color-acento: #7FA3B8;
+  --color-fondo: #F7F8F6;
+  --color-texto: #2E3934;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.planes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .planes-container {
+    grid-template-columns: 1fr;
+  }
+}
