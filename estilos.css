@@ -1,9 +1,9 @@
 :root {
-  --color-primario: #4A6B5E;
-  --color-secundario: #A9B4B8;
-  --color-acento: #7FA3B8;
-  --color-fondo: #F7F8F6;
-  --color-texto: #2E3934;
+  --color-primario: #00D4FF;   /* antes verde salvia → ahora cian, tu color de acento fuerte */
+  --color-secundario: #A9B4B8; /* se mantiene igual, funciona bien como gris en dark mode */
+  --color-acento: #0F1419;     /* antes azul pastel → ahora el fondo oscuro principal */
+  --color-fondo: #0F1419;      /* antes crema claro → ahora fondo oscuro */
+  --color-texto: #F5F5F5;      /* antes texto oscuro → ahora texto claro (se invierte todo) */
 }
 
 .logo {
@@ -15,37 +15,134 @@ h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
 }
 
+h1 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--color-fondo);
   color: var(--color-texto);
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
 }
 
+  .container { 
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
 header {
-  text-align:center;
+  background-image: linear-gradient(rgba(15, 20, 25, 0.75), rgba(15, 20, 25, 0.75)), url('hero-bd.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 24px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 80px;
+  position: relative;
+  gap: 16px;
+}
+
+header p {
+  font-size: 20px;
+  max-width: 600px;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+}
+
+header .boton {
+  margin-top: 32px;
+}
+
+.etiqueta {
+  color: var(--color-primario);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+  box-sizing: border-box;
+}
+
+.logo-nav {
+width: 60px;
+height: auto;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.link-menu {
+color: white;
+text-decoration: none;
+font-weight: 500;
+}
+
+.link-menu:hover {
+  color: var(--color-primario);
 }
 
 .planes-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin-bottom: 100px;
+}
+
+form {
+  margin-bottom: 100px;
 }
 
 a {
-  display: inline-block;
+  color: var(--color-primario);
   text-decoration: none;
-  background-color: var(--color-primario);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  background-color: #395549;
+  color: var(--color-secundario);
+}
+
+.boton {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  align-self: center;
+}
+
+.boton:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-fondo);
 }
 
 .campo {
@@ -63,13 +160,23 @@ a:hover {
 
 .plan {
   border-radius:12px;
-  background-color: #FFFFFF;
+  background-color: rgba(0, 212, 255, 0.05);
   padding: 24PX;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.destacado{
+  background-color: rgba(0, 212, 255, 0.1);
+  border: 2px solid var(--color-primario);
+  transform :scale(1.05);
 }
 
  input, textarea {
     border-radius: 8px;
+    background-color: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    color: var(--color-texto);
+    padding: 10px 14px;
  } 
 
  button { 
@@ -79,3 +186,37 @@ a:hover {
  textarea {
   resize: vertical;
  }
+
+h2 {
+text-align: center;
+font-size: 40px;
+margin-top: 100px;
+margin-bottom: 40px;
+}
+
+footer {
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 24px;
+}
+
+.link-social {
+  color: var(--color-texto);
+  font-size: 24px;
+  transition: color 0.2s ease;
+}
+
+.link-social:hover {
+  color: var(--color-primario);
+}

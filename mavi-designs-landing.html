@@ -5,21 +5,31 @@
 <title>MAVI DESIGNS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 <header>
-<img src="logomavidesigns.png" alt="Logo de Mavi Designs - Diseño de landing Pages" class="logo">
+    <nav class="navbar">
+        <img src="logomavidesigns.png" alt="Logo de Mavi Designs" class="logo-nav">
+        <ul class="menu">
+            <li><a href="#" class="link-menu">Inicio</a></li>
+            <li><a href="#formulario-contacto" class="link-menu">Planes</a></li>
+            <li><a href="#formulario-contacto" class="link-menu">Contacto</a></li>
+        </ul>
+    </nav>
+<span class="etiqueta">Desarrollo Web & Estrategia Digital</span>
 <h1>Mavi Designs</h1>
 <p>Diseñamos experiencias digitales que convierten ideas en marcas que destacan, conectan y venden. Porque tu marca merece más que una página web, merece una experiencia digital que genere resultados.</p>
-<a href="https://wa.me/573243994435?text=hola,%20quiero%20información%20para%20mi%20langind%20page">Conversemos por WhatsApp</a>
+<a href="https://wa.me/573243994435?text=hola,%20quiero%20información%20para%20mi%20langind%20page" class="boton">Conversemos por WhatsApp</a>
 </header>
 <main>
 <h2>Nuestras soluciones</h2>
+<div class="container">
 <div class="planes-container">
 <div class="plan">
-<h3>Plan START - Necesitas estar</h3>
+<h3>Plan START - Necesitas Estar</h3>
 <p>$900.000</p>
 <p>Una landing profesional para presentar tu marca, comunicar tu propuesta de valor y empezar a generar oportunidades.</p>
 <ul>
@@ -31,10 +41,10 @@
 <li>Integración con WhatsApp</li>
 <li>SEO y configuración básica</li>
 </ul>
-<a href="#formulario-contacto">Cotizar ahora</a>
+<a href="#formulario-contacto" class="boton">Cotizar ahora</a>
 </div>
 <div class="plan destacado">
-<h3>Plan PRO- Necesitas convertir</h3>
+<h3>Plan PRO- Necesitas Convertir</h3>
 <p>$1.400.000</p>
 <p>Una experiencia digital personalizada, diseñada no solo para mostrar tu marca, sino para convertir visitantes en oportunidades.</p>
 <ul>
@@ -46,10 +56,10 @@
 <li>Pixel y eventos de conversión</li>
 <li>Animaciones y microinteracciones</li>
 </ul>
-<a href="#formulario-contacto">Cotizar ahora</a>
+<a href="#formulario-contacto" class="boton">Cotizar ahora</a>
 </div>
 <div class="plan">
-<h3>Plan GROW- Necesitas crecer</h3>
+<h3>Plan GROW- Necesitas Crecer</h3>
 <p>$2.300.000</p>
 <p>Una experiencia digital personalizada, diseñada no solo para mostrar tu marca, sino para convertir visitantes en oportunidades.</p>
 <ul>
@@ -62,7 +72,7 @@
 <li>Campañas y generación de tráfico</li>
 <li>Optimización continua orientada a resultados</li>
 </ul>
-<a href="#formulario-contacto">Cotizar ahora</a>
+<a href="#formulario-contacto" class="boton">Cotizar ahora</a>
 </div>
 </div>
 <h2>¡Escríbenos y cotiza tu sitio web!</h2>
@@ -81,12 +91,20 @@
     <p id="mensaje-error"></p>
 </div>
 <div class="campo">
-<button type="submit">Enviar</button>
+<button type="submit" class="boton">Enviar</button>
 </div>
 </form>
+</div>
 </main>
 <footer>
-<p>&copy; 2026 Mavi Designs. Todos los derechos reservados.</p>
+    <div class="footer-content">
+        <p>&copy; 2026 Mavi Designs - Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="#" class="link-social"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="link-social"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="link-social"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
 </footer>
 <script src="script.js"></script>
 </body>
