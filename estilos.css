@@ -105,6 +105,44 @@ font-weight: 500;
   color: var(--color-primario);
 }
 
+.beneficios-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 100px;
+}
+
+.beneficio {
+  background-color: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+}
+
+.beneficio i {
+  font-size: 36px;
+  color: var(--color-primario);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.beneficio h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.beneficio p {
+  opacity: 0.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .beneficios-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 .planes-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -112,8 +150,15 @@ font-weight: 500;
   margin-bottom: 100px;
 }
 
+.precio {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin: 8px 0;
+}
+
 form {
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 a {
@@ -163,12 +208,23 @@ a:hover {
   background-color: rgba(0, 212, 255, 0.05);
   padding: 24PX;
   border: 1px solid rgba(0, 212, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.plan .boton {
+  margin-top: auto;
 }
 
 .destacado{
   background-color: rgba(0, 212, 255, 0.1);
   border: 2px solid var(--color-primario);
   transform :scale(1.05);
+}
+
+#planes,
+#formulario-contacto {
+  scroll-margin-top: 100px;
 }
 
  input, textarea {
@@ -182,6 +238,11 @@ a:hover {
  button { 
   border-radius: 8px;
  }
+
+ #formulario-contacto .boton {
+  padding: 16px 40px;
+  font-size: 18px;
+}
 
  textarea {
   resize: vertical;
